@@ -1,15 +1,14 @@
-"use es6";
-
 import styled from "styled-components";
 import { Outlet } from "react-router-dom";
 
 import Nav from "../components/Nav";
+import MainWrapper from "./MainWrapper";
 
 const AppWrapper = styled.div`
-	background-color: #fff;
 	border-radius: 10px;
 
 	max-width: 980px;
+	min-width: 85vw;
 	margin: auto;
 
 	display: grid;
@@ -21,7 +20,9 @@ const Layout = () => {
 	return (
 		<AppWrapper>
 			<Nav />
-			<Outlet />
+			<MainWrapper>
+				<Outlet />
+			</MainWrapper>
 		</AppWrapper>
 	);
 };
